@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 
 export class Newsitems extends Component {
   render() {
-      let {title,description,imageUrl,newsUrl,author,date} = this.props;
+      let {title,description,imageUrl,newsUrl,author,date,source} = this.props;
     return (
         <div>
             <div className="card my-4">
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{left: '90%' ,zIndex: '1'}}>{source}</span>
               {/*if in case imageUrl is null -> attach below link */}
              <img src={imageUrl == null ? "https://th.bing.com/th/id/OIP.np1BGMCMmFhrQ9WCP1SeTgHaE7?pid=ImgDet&rs=1" : imageUrl} className="card-img-top" alt="..."/>
                 <div className="card-body">

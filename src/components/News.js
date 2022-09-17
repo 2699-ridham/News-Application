@@ -89,7 +89,8 @@ export default class News extends Component {
                         {/*col-md-4 makes align 3 boxes in one line with space of 4 grid*/}
                             <Newsitems title={element.title ? element.title.slice(0,45) : ""} 
                             description={element.description ? element.description.slice(0,88) : ""} 
-                            imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt}/>
+                            imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt}
+                            source={element.source.name}/>
                         </div>
                     })}
                 </div>
